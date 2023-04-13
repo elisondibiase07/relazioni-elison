@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('product_tag', function (Blueprint $table) {
             $table->id();
+            
+              //? fk prodotti
+              $table->unsignedBigInteger('product_id');
+              $table->foreign('product_id')->references('id')->on('products');
+              //? fk tag
+              $table->unsignedBigInteger('tag_id');
+              $table->foreign('tag_id')->references('id')->on('tags');
+
+              
             $table->timestamps();
         });
     }

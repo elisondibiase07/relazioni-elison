@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        Auth::user()->products()->create(
+        $product=Auth::user()->products()->create(
             [
                 'name'=>$request->input('name'),
                 'description'=>$request->input('description'),
@@ -42,7 +42,14 @@ class ProductController extends Controller
                 'category_id'=>$request->input('category_id'),
                
             ]
+
         );
+        //* devo associare tutti i tag con gli id selzionati al prodotto creato
+   foreach ($request->input('tag_id') as $tag) {
+       //*attach e un metodo della relazione belongsToManY che crea una nuova associazione nella tabella pivot
+       //* con id dell oggetto su cui lo richiamo con $product e lo passeremo alla fuzione
+       $product->tags()->attach($tag);
+   }
 
         return redirect()->route('homepage')->with('message' , 'Prodotto in vendita');
     }
