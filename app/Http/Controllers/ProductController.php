@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,7 +22,8 @@ class ProductController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
+    {   
+        // $categories= Category::all();
         return view('product/create');
     }
 
@@ -37,6 +39,8 @@ class ProductController extends Controller
                 'description'=>$request->input('description'),
                 'price'=>$request->input('price'),
                 'img' =>$request->has('img') ? $request->file('img')->store('public/products') : '/img/default.jpg',
+                'category_id'=>$request->input('category_id'),
+               
             ]
         );
 
@@ -47,6 +51,9 @@ class ProductController extends Controller
         return view('product/productByUser' , compact('user'));
     }
 
+    public function productsByCategory(Category $category){
+        return view('product/category' , compact('category'));
+    }
     /**
      * Display the specified resource.
      */

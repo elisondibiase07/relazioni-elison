@@ -1,5 +1,5 @@
 <x-layout>
-    <x-header title="Vendi un Prodotto" />
+    <x-header title="Vendi il Tuo Prodotto" />
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6">
@@ -16,6 +16,14 @@
                       <div class="mb-3">
                         <label class="form-label">Prexxo Prodotto</label>
                         <input type="number" class="form-control" name="price"> 
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Categorie : </label>
+                        <select name="category_id" id="" class="form-control">
+                          @foreach ($categories as $category)
+                              <option value="{{$category->id}}">{{$category->name}}</option>
+                          @endforeach  
+                        </select> 
                       </div>
                       <div class="mb-3">
                         <label class="form-label">Immagine</label>

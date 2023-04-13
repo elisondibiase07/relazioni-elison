@@ -14,7 +14,8 @@ class Product extends Model
         'description',
         'price',
         'img', 
-        'user_id'
+        'user_id',
+        'category_id'
     ];
       //! funz di relazione
     //? un prodotto puo  essere collegato ad un tante 
@@ -22,5 +23,10 @@ class Product extends Model
     public function user(){
 
         return $this->belongsTo(User::class); //* ritorna l'utente collegato al prodotto
+    }
+
+    public function category(){
+    
+        return $this->belongsTo(Category::class); //* ritorna l'utente collegato al prodotto
     }
 }
