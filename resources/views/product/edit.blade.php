@@ -52,7 +52,7 @@
                         <label class="form-label">Immagine</label>
                         <input type="file" class="form-control" name="img"> 
                       </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Salva Modifica</button>
                   </form>
             </div>
         </div>

@@ -1,0 +1,53 @@
+body{
+    background-image: url(https://img.freepik.com/free-photo/clapperboard-with-cinema-tickets-3d-glasses_23-2148133625.jpg?w=360);
+    background-size: contain;
+}
+
+.nav-link{
+    color: beige;
+    font-size: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    
+}
+
+.logo{
+    color: beige;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.nav-link:hover{
+    color: red;
+}
+
+.header{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.258),  rgba(0, 0, 0, 0.623) ) ,url(https://mr.comingsoon.it/imgdb/PrimoPiano/150333_ppl.jpg);
+    background-size: contain;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.h1-header{
+    color: rgb(230, 215, 215);
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 10px 10px 1px rgb(16, 16, 16);
+    
+    
+}
+
+.card{
+    border: 5px solid black;
+    border-radius: 10px;
+    color: beige;
+    background-color: rgba(25, 25, 24, 0.779);
+}

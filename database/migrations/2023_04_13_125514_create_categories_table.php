@@ -21,9 +21,12 @@ return new class extends Migration
         $names = [
             'horror',
             'thriller',
-            'action',
-            'romantic',
-            'commedy'
+            'azione',
+            'romantico',
+            'commedia',
+            'romanzo',
+            'drammatico',
+            'biografico',
         ];
 
         foreach($names as $name){

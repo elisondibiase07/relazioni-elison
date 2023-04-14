@@ -30,3 +30,5 @@ Route::get('/user/products/{user}' , [ProductController::class , 'getProductsByI
 Route::get('/product/show/{product}' , [ProductController::class , 'show'])->name('product.show');
 
 Route::get('/products/category/{category}', [ProductController::class, 'productsByCategory'])->name('product.category');
+
+Route::post('/submit', [PublicController::class, 'submit'])->name('submit');

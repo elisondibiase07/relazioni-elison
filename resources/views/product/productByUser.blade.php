@@ -1,5 +1,5 @@
 <x-layout>
-    <x-header title="Prodotti dell'utente"/>
+    <x-header title="I tuoi Prodotti"/>
     <div class="container my-5">
         <div class="row justify-content-center">
                 @foreach ($user->products as $product)
@@ -11,7 +11,7 @@
                         <h5 class="card-title"> Venditore : {{$product->user->name}}</h5>
                         <p class="card-text">{{$product->description}}</p>
                         <p class="card-text">Prezzo : {{$product->price}}</p>
-                        <a href="{{route('product.show' , $product)}}" class="btn btn-primary">Go somewhere</a>
+                        <a href="{{route('product.show' , $product)}}" class="btn btn-primary">Salva</a>
                         </div>
                     </div>
                 </div>

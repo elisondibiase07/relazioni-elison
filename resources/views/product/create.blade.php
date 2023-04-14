@@ -14,7 +14,7 @@
                         <textarea name="description" cols="30" rows="10" class="form-control"></textarea>
                       </div>
                       <div class="mb-3">
-                        <label class="form-label">Prexxo Prodotto</label>
+                        <label class="form-label">Prezzo Prodotto</label>
                         <input type="number" class="form-control" name="price"> 
                       </div>
                       <div class="mb-3">
@@ -38,7 +38,7 @@
                         <label class="form-label">Immagine</label>
                         <input type="file" class="form-control" name="img"> 
                       </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Salva</button>
                   </form>
             </div>
         </div>

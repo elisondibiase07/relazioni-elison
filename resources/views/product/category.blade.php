@@ -2,7 +2,7 @@
     <div class="container-fluid bg-warning py-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1>Film : {{$category->name}}</h1>
+                <h1 class="display-1">Film : {{$category->name}}</h1>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
                             <p class="card-text">Categoria : {{$product->category->name}}</p>   
                             <p class="card-text">{{$product->description}}</p>
                             <p class="card-text">Prezzo : {{$product->price}}</p>
-                            <a href="{{route('product.show' , $product)}}" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{route('product.show' , $product)}}" class="btn btn-danger">Mostra di più</a>
                         </div>
                     </div>
                 </div>

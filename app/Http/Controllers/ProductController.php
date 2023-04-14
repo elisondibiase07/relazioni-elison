@@ -107,5 +107,7 @@ class ProductController extends Controller
                 $product->delete();
                 return redirect(route('homepage'))->with('message', 'Prodotto eliminato');
             }
+
+           
         }
         
