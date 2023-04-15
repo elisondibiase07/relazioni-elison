@@ -12,40 +12,42 @@ use Illuminate\Queue\SerializesModels;
 class TestMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    
     /**
-     * Create a new message instance.
-     */
-    public function __construct($mailData)
+    * Create a new message instance.
+    */
+    
+    public $user;
+    public function __construct($user)
     {
-        $this->$mailData = $mailData;
+        $this->$user = $user;
     }
-
+    
     /**
-     * Get the message envelope.
-     */
+    * Get the message envelope.
+    */
     public function envelope(): Envelope
     {
         return new Envelope(
             subject: 'Test Mail',
         );
     }
-
+    
     /**
-     * Get the message content definition.
-     */
+    * Get the message content definition.
+    */
     public function content(): Content
     {
         return new Content(
-            view: 'mail.TestMail',
+            view: 'email.test',
         );
     }
-
+    
     /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
+    * Get the attachments for the message.
+    *
+    * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+    */
     public function attachments(): array
     {
         return [];

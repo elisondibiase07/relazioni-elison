@@ -9,6 +9,9 @@
         <li class="nav-item ">
           <a class="nav-link  " aria-current="page" href="{{route('homepage')}}">Homepage</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('contacts')}}">Lavora con noi</a>
+        </li>
         @guest
         <li class="nav-item ">
           <a class="nav-link" href="{{route('register')}}">Registrati</a>

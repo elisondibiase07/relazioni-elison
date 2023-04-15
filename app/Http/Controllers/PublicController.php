@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Exception;
-use App\Mail\TestMail;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+
 
 class PublicController extends Controller
 {
@@ -16,17 +15,24 @@ class PublicController extends Controller
         return view('welcome' , compact('products'));
     }
 
+    public function contacts(){
 
+        return view('contacts');
+
+    }
 
     public function submit(Request $request){
-        $email = $request->email;
+        // $email = $request->email;
+        // $user = compact('email');
+        
+        dd($request);
         // $name = $request->name;
         // $message = $request->message;
 
         // $user = compact('name' , 'email' , 'message');
 
         // try{
-           Mail::to($email)->send(new TestMail($mailData)); 
+        //    Mail::to($email)->send(new TestMail($user)); 
         // }catch(Exception $e){
         //     return redirect(route('homepage'))->with('errorMessage' ,"C'e stato un problema con l'invio della mail. Per favore, riprova piu tardi");
         // }
@@ -34,6 +40,6 @@ class PublicController extends Controller
 
         
         // dd('Controlla la tua mail');
-        return redirect(route('homepage'))->with('message' ,'La tua email e stata correttamente inviata');
+        // return redirect(route('homepage'))->with('message' ,'La tua email e stata correttamente inviata');
     }
 }

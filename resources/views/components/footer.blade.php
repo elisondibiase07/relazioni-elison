@@ -15,30 +15,33 @@
           <!--Grid column-->
           
           <!--Grid column-->
-          <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div class="form-outline form-white mb-4">
-              <input type="email" id="form5Example29" class="form-control" />
-              <label class="form-label" for="form5Example29">Email address</label>
-            </div>
-          </div>
           <!--Grid column-->
           
           <!--Grid column-->
-          <div class="col-auto">
-            <!-- Submit button -->
-            <form method="POST" action="{{route('submit')}}" enctype="multipart/form-data">
-            
-              <a class=" btn btn-outline-light mb-4 " aria-current="page" href="{{route('register')}}">Invia</a>
-            </form>
+          <!-- Submit button -->
+          <form method="POST" action="{{route('submit')}}" >
+            @csrf
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="form5Example29">Email address</label>
+                <input type="email"  name="email"  class="form-control" />
+              </div>
+            </div>
+            <div class="col-auto">
+                            
+              <button type="submit" class="btn btn-primary">Invia</button>
+              {{-- <a class=" btn btn-outline-light mb-4 "  aria-current="page" href="{{route('register')}}"> --}}
+                {{-- </a> --}}
+              </form>
+            </div>
+            <!--Grid column-->
           </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </form>
-    </section>
-    <!-- Section: Form -->
-  </div>
-  <!-- Grid container -->
-  
-</footer>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+    </div>
+    <!-- Grid container -->
+    
+  </footer>

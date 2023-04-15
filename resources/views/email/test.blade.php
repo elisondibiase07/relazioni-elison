@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ciao {{$mailData['name']}}</h1>
+    <h1>Ciao grazie per essere iscritto alla nostra Newsletter</h1>
     <h2>Grazie per averci contattato</h2>
     <h3>Sei iscritto alla nostra Newsletter</h3>
    

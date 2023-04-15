@@ -31,4 +31,5 @@ Route::get('/product/show/{product}' , [ProductController::class , 'show'])->nam
 
 Route::get('/products/category/{category}', [ProductController::class, 'productsByCategory'])->name('product.category');
 
-Route::post('/submit', [PublicController::class, 'submit'])->name('submit');
+Route::get('/lavora_con_noi',[PublicController::class , 'contacts'])->name('contacts');
+Route::post('/lavora_con_noi/submit', [PublicController::class, 'submit'])->name('submit');
