@@ -104,6 +104,8 @@ class ProductController extends Controller
             */
             public function destroy(Product $product)
             {   
+                $product->tags()->detach();
+                
                 $product->delete();
                 return redirect(route('homepage'))->with('message', 'Prodotto eliminato');
             }

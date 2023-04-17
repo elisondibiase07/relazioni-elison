@@ -16,7 +16,7 @@ return new class extends Migration
             
               //? fk prodotti
               $table->unsignedBigInteger('product_id')->nullable();
-              $table->foreign('product_id')->references('id')->on('products');
+              $table->foreign('product_id')->references('id')->on('products')->onDelete('set null');
               //? fk tag
               $table->unsignedBigInteger('tag_id');
               $table->foreign('tag_id')->references('id')->on('tags');

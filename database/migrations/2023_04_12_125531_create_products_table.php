@@ -23,7 +23,7 @@ return new class extends Migration
             //? dobbiamo crearlo
             $table->foreign('user_id') //?assegna un vincolo a questa colonna 
                     ->references('id') //? questa colonna fa riferimento alla colonna id
-                    ->on('users'); //? nella tabella users
+                    ->on('users')->onDelete('set null'); //? nella tabella users
             $table->timestamps();
         });
     }
